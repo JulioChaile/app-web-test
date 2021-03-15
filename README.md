@@ -1,68 +1,35 @@
 
 
-## Available Scripts
+# Demo
 
-In the project directory, you can run:
+Puede probar una demo del proyecto siguiendo el sguiente enlace
+https://juliochaile.github.io/app-web-test/
 
-### `yarn start`
+# Instalacion
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para levantar el proyecto localmente primero clonelo en su dispositivo y luego siga las instrucciones
+- Clonar el proyecto con ```git clone https://github.com/JulioChaile/app-web-test ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Frontend
 
-### `yarn test`
+- Situese en el directorio del proyecto
+- Ejecutar ```npm install``` y esperar que se instalen las dependencias.
+- Si no se tiene instalado node.js y npm debera descargarlo de su web [Node.js](https://nodejs.org/en/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Base de datos
 
-### `yarn build`
+- Importar en MySQL el archivo ```Dump20210315.sql```, con esto creara la base de datos usada por el proyecto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Situese en el directorio ```/api``` y ejecute ```composer install```
+- En caso de no tener composer instalado ejecute los siguientes comandos en linux:
+```curl -sS https://getcomposer.org/installer | php```
+```mv composer.phar /usr/local/bin/composer```
+- En windows debera descargarlo desde su web [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
+- En el directorio ```/api/config/``` debera modificar el archivo ```db.php``` con los datos de la base de datos:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Puesta en marcha
+- En una terminal situese en el directorio ```/api``` y ejecute ```php yii serve```, esto montara la api en el servidor 8080
+- En una terminar diferente situese en el directorio raiz y ejecute ```npm start```
+- Abra [http://localhost:3000](http://localhost:3000) para verlo en el navegador
