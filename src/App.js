@@ -11,173 +11,6 @@ import logo from './images/logo.png'
 
 const api = 'http://localhost:8080'
 
-const s = `[
-    {
-        "IdModelo":"1",
-        "Marca":"Yaris",
-        "A\u00f1o":"2020",
-        "Precio":"1.038.900",
-        "ImgHome":"yaris.png",
-        "ImgFicha":"yaris@2x.png",
-        "Categoria":"P",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"2",
-        "Marca":"Corolla",
-        "A\u00f1o":"2018",
-        "Precio":"1.430.700",
-        "ImgHome":"corolla.png",
-        "ImgFicha":"corolla@2x.png",
-        "Categoria":"S",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"3",
-        "Marca":"Prius",
-        "A\u00f1o":"2019",
-        "Precio":"2.882.000",
-        "ImgHome":"prius-1.png",
-        "ImgFicha":"prius-1@2x.png",
-        "Categoria":"S",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"4",
-        "Marca":"Camry",
-        "A\u00f1o":"2018",
-        "Precio":"3.753.200",
-        "ImgHome":"camry.png",
-        "ImgFicha":"camry@2x.png",
-        "Categoria":"A",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"5",
-        "Marca":"Toyota 86",
-        "A\u00f1o":"2019",
-        "Precio":"3.812.100",
-        "ImgHome":"toyota-86.png",
-        "ImgFicha":"toyota-86@2x.png",
-        "Categoria":"A",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"6",
-        "Marca":"Innova",
-        "A\u00f1o":"2020",
-        "Precio":"2.596.400",
-        "ImgHome":"innova.png",
-        "ImgFicha":"innova@2x.png",
-        "Categoria":"P",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"7",
-        "Marca":"SW4",
-        "A\u00f1o":"2019",
-        "Precio":"3.236.200",
-        "ImgHome":"sw-4.png",
-        "ImgFicha":"sw-4@2x.png",
-        "Categoria":"P",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"8",
-        "Marca":"RAV4",
-        "A\u00f1o":"2019",
-        "Precio":"3.170.200",
-        "ImgHome":"rav-4.png",
-        "ImgFicha":"rav-4@2x.png",
-        "Categoria":"A",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"9",
-        "Marca":"Land Cruiser Prado",
-        "A\u00f1o":"2017",
-        "Precio":"815.900",
-        "ImgHome":"prado.png",
-        "ImgFicha":"prado@2x.png",
-        "Categoria":"P",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"10",
-        "Marca":"Land Cruiser 200",
-        "A\u00f1o":"2018",
-        "Precio":"7.873.100",
-        "ImgHome":"cruiser.png",
-        "ImgFicha":"cruiser@2x.png",
-        "Categoria":"S",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"11",
-        "Marca":"Hilux",
-        "A\u00f1o":"2020",
-        "Precio":"1.507.000",
-        "ImgHome":"hilux.png",
-        "ImgFicha":"hilux@2x.png",
-        "Categoria":"A",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    },
-    {
-        "IdModelo":"13",
-        "Marca":"Etios",
-        "A\u00f1o":"2019",
-        "Precio":"815.900",
-        "ImgHome":"etios.png",
-        "ImgFicha":"etios@2x.png",
-        "Categoria":"A",
-        "Titulo":"Preparada para cualquier desaf\u00edo ",
-        "Descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Caracteristicas":"[{\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 11}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 12}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 13}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 14}, {\'Img\': \'image.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicaModelo\': 15}]",
-        "CaracteristicasResaltables":"[{\'Img\': \'3.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 7}, {\'Img\': \'1.png\', \'Titulo\': \'Titulo\', \'Descripcion\': \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam\', \'IdCaracteristicasResaltablesModelo\': 8}]"
-    }
-
-]`
-
-let modelos = JSON.parse(s)
-modelos.forEach(m => {
-  m.Caracteristicas = JSON.parse(m.Caracteristicas.replace(/\'/g, '"'))
-  m.CaracteristicasResaltables = JSON.parse(m.CaracteristicasResaltables.replace(/\'/g, '"'))
-})
-console.log(modelos)
-
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -199,12 +32,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.modelosTodos = modelos
-    this.setState({
-      modelos: modelos,
-      modeloFicha: modelos[0]
-    })
-    /*
     fetch(`${api}/modelos`)
       .then(res => res.json())
       .then(
@@ -236,7 +63,6 @@ class App extends React.Component {
           console.log(error)
         }
       )
-    */
   }
 
   filtrarModelos (cat) {
@@ -255,12 +81,10 @@ class App extends React.Component {
   }
 
   verModelo (id) {
-    const m = this.state.modelos.filter(f => f.IdModelo === id)[0]
     this.setState({
-      modeloFicha: m,
+      modeloFicha: {},
       tab: 'ficha'
     })
-    /*
     fetch(`${api}/modelos/${id}`)
       .then(res => res.json())
       .then(
@@ -273,7 +97,6 @@ class App extends React.Component {
           console.log(error)
         }
       )
-    */
   }
 
   ordenarModelos (orden) {
